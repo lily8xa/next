@@ -1,0 +1,31 @@
+.form{
+    margin: 30px;
+    padding: 30px;
+    width: 800px;
+    gap: 30px;
+    border: #9cd4e8 1px solid;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    background: #343471;
+    color: lightskyblue;
+}
+.error{
+    background: rgba(88, 143, 143, 0.58);
+    color: red;
+    border-radius: 10px;
+}
+.input {
+    width: 100%;
+    padding: 10px 14px;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #111827;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
