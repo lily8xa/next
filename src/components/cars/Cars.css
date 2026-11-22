@@ -1,0 +1,7 @@
+.main-cars{
+    display: flex;
+    flex-wrap: wrap;
+    background: darkslategray;
+    color: #9cd4e8;
+    font-size: 30px;
+}
