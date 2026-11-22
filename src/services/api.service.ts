@@ -8,7 +8,7 @@ export const getAllUsers = async (): Promise<UserType[]> => {
     'use cache';
     const response = await fetch(`${baseUrls}/users`);
 
-    if (!response) {
+    if (!response.ok) {
         throw new Error('no users');
     }
 
@@ -16,7 +16,7 @@ export const getAllUsers = async (): Promise<UserType[]> => {
 };
 export const getAllUserById=async (id:string): Promise<UserType> => {
     const response = await fetch(`${baseUrls}/users/${id}`);
-    if(!response){
+    if(!response.ok){
         throw new Error('no user by id')
     }
     return await response.json();
@@ -24,14 +24,14 @@ export const getAllUserById=async (id:string): Promise<UserType> => {
 export const getAllPosts=async (): Promise<PostType[]> => {
     'use cache'
     const response = await fetch(`${baseUrls}/posts`);
-    if(!response){
+    if(!response.ok){
         throw new Error('no posts');
     }
     return await response.json();
 }
 export const getAllPostById=async (id:string): Promise<PostType> => {
     const response=await fetch(`${baseUrls}/posts/${id}`);
-    if(!response){
+    if(!response.ok){
         throw new Error('no post by id')
     }
     return await response.json();
@@ -39,14 +39,14 @@ export const getAllPostById=async (id:string): Promise<PostType> => {
 export const getAllComments=async (): Promise<CommentType[]> => {
     'use cache'
     const response=await fetch(`${baseUrls}/comments`);
-    if (!response){
+    if (!response.ok){
         throw new Error('no comments');
     }
     return await response.json();
 }
 export const getAllCommentById=async (id:string): Promise<CommentType> => {
     const response = await fetch(`${baseUrls}/comments/${id}`);
-    if (!response){
+    if (!response.ok){
         throw new Error('no comment by id')
     }
     return await response.json();

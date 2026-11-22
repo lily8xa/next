@@ -7,8 +7,6 @@ export const generateMetadata=async ():Promise<Metadata>=>{
 }
 const UsersPage = async () => {
     const users = await getAllUsers();
-    console.log(users);
-
     return (
         <div>
             {users.map((user) => (
